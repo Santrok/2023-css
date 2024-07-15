@@ -176,3 +176,44 @@
             color: bisque;
         }
 }
+
+.add_to_basket {
+    padding: 5px;
+    background-color: bisque;
+    cursor: pointer;
+    color: chocolate;
+    border-radius: 10px;
+    &:hover{
+        color: purple;
+        background-color: coral;
+    }
+}
+
+.card_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.basket {
+    display: flex;
+    background-color: white;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    gap: 5px;
+    border-radius: 10px;
+
+}
+
+.basket_img {
+    max-width: 25px;
+    max-height: 25px;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}

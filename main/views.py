@@ -2,6 +2,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
+from baskett.forms import CartAddProductForm
 from main.forms import AddCarForm, RegistrationForm, LoginForm
 from main.models import Car, Brand
 
@@ -41,8 +42,10 @@ def page_add_car(request):
 
 def detail_info(request, id):
     car = Car.objects.get(id=id)
+    cart_product_form = CartAddProductForm()
     context = {
-        'car': car
+        'car': car,
+        'cart_product_form': cart_product_form,
     }
     return render(request, 'detail.html', context)
 

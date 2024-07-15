@@ -18,38 +18,38 @@
         <div class="main_header_list">
             <div class="header_left">
                 <a href="{% url 'home' %}" class="header_list_logo">
-                <img src="{% static 'img/logo.png' %}" alt="">
-            </a>
+                    <img src="{% static 'img/logo.png' %}" alt="">
+                </a>
                 <div class="header_list_social_account">
-                <p class="social_account_title">Социальные сети:</p>
-                <ul class="social_account_list">
-                    <li class="social_account_item">
-                        <a href="#">
-                            <img src="{% static 'img/instagram.svg' %}" alt="">
-                        </a>
-                    </li>
-                    <li class="social_account_item">
-                        <a href="#">
-                            <img src="{% static 'img/telegram.svg' %}" alt="">
-                        </a>
-                    </li>
-                    <li class="social_account_item">
-                        <a href="#">
-                            <img src="{% static 'img/tiktok.svg' %}" alt="">
-                        </a>
-                    </li>
-                    <li class="social_account_item">
-                        <a href="#">
-                            <img src="{% static 'img/whatsapp.svg' %}" alt="">
-                        </a>
-                    </li>
-                    <li class="social_account_item">
-                        <a href="#">
-                            <img src="{% static 'img/youtube.svg' %}" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <p class="social_account_title">Социальные сети:</p>
+                    <ul class="social_account_list">
+                        <li class="social_account_item">
+                            <a href="#">
+                                <img src="{% static 'img/instagram.svg' %}" alt="">
+                            </a>
+                        </li>
+                        <li class="social_account_item">
+                            <a href="#">
+                                <img src="{% static 'img/telegram.svg' %}" alt="">
+                            </a>
+                        </li>
+                        <li class="social_account_item">
+                            <a href="#">
+                                <img src="{% static 'img/tiktok.svg' %}" alt="">
+                            </a>
+                        </li>
+                        <li class="social_account_item">
+                            <a href="#">
+                                <img src="{% static 'img/whatsapp.svg' %}" alt="">
+                            </a>
+                        </li>
+                        <li class="social_account_item">
+                            <a href="#">
+                                <img src="{% static 'img/youtube.svg' %}" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="header_right">
                 <ul class="phone_number_list">
@@ -103,31 +103,43 @@
                     <button>Найти</button>
                 </form>
             </div>
+            <a href="{% url 'cart_detail' %}" class="basket">
+                <div class="basket_img">
+                    <img src="{% static 'img/basket.png' %}" alt="">
+                </div>
+            
+            <p>
+                {{cart|length}}
+            </p>
+        
+    
+            </a>
         </div>
     </div>
     <div class="list_card">
-    {% block content %}
+        {% block content %}
 
         <div class="list_wrapper">
             {% for car in cars %}
             <article>
-                <a href="{% url 'detail_info' car.id %}" class="card">
-                    <div class="card_img">
-                        <img src="{{ car.image.url }}" alt="">
-                    </div>
-                    <p class="card_title">
-                        {{ car.brand }} {{ car.model }}
-                    </p>
+                    <a href="{% url 'detail_info' car.id %}" class="card">
+                        <div class="card_img">
+                            <img src="{{ car.image.url }}" alt="">
+                        </div>
+                        <p class="card_title">
+                            {{ car.brand }} {{ car.model }}
+                        </p>
+
                     <p class="card_price">
                         {{ car.price }}$
                     </p>
-                </a>
+                        </a>
             </article>
             {% endfor %}
         </div>
 
-    {% endblock %}
-        </div>
+        {% endblock %}
+    </div>
 </div>
 </body>
 </html>

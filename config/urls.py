@@ -23,6 +23,7 @@ from config import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("main.urls")),
+    path('cart/', include('baskett.urls')),
 ]
 
 if settings.DEBUG:
