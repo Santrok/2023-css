@@ -20,7 +20,7 @@
         <tbody>
         {% for item in cart %}
             {% with product=item.product %}
-                <tr>
+                <tr class="product">
                     <td>
                         <a href="{% url 'detail_info' product.id %}" class="cart_img">
                             <img src="{{ product.image.url }}" alt="">
@@ -34,12 +34,15 @@
                 </tr>
             {% endwith %}
         {% endfor %}
+
+        </tbody>
+        <tfoot>
         <tr class="total">
             <td>Total</td>
             <td colspan="4"></td>
             <td class="num">${{ cart.get_total_price }}</td>
         </tr>
-        </tbody>
+        </tfoot>
     </table>
     <p class="text-right">
         <a href="{% url 'home' %}" class="button light">Continue shopping</a>
