@@ -1,0 +1,29 @@
+.detail_info {
+    background-color: bisque;
+}
+
+.wrapper {
+    padding: 20px;
+    display: flex;
+    gap: 100px;
+}
+
+.block_images {
+    display: flex;
+    gap: 10px;
+}
+
+.additional_image {
+    max-width: 150px;
+    max-height: 100px;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.additional_images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

@@ -1,0 +1,30 @@
+SECRET_KEY = 'django-insecure-!1l0nr2478x=vjlknx=_q6fveg8o0-!egyrs4_bkn^^r*++c42'
+DB_NAME = 'finaid_db_v1'
+DB_USER = 'Artem_Gol_D_Roger'
+DB_PASS = 'DdSecQGUjqe#%L'
+DB_HOST = 'finaid_db_v1'
+PORT = 5432
+
+DEBUG = False
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'test.django.test.email@gmail.com'
+EMAIL_HOST_PASSWORD = 'mghbriecrbyryaoz'
+EMAIL_USE_TLS = True
+
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+
+PGADMIN_DEFAULT_EMAIL = pgadmin@pgadmin.org
+PGADMIN_DEFAULT_PASSWORD = admin12345
+PGADMIN_PORT = 5050
+
+POSTGRES_DB = finaid_db_v1
+POSTGRES_USER = Artem_Gol_D_Roger
+POSTGRES_PASSWORD = DdSecQGUjqe#%L
+
+TOKEN = 6186697428:AAFll5MR-s2MYn1epkYiefA3Lo8xm6pMVQU
+my_id = -1001504778650
