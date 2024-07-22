@@ -36,6 +36,13 @@
                     {{ car.description }}
                 </li>
             </ul>
+            <form action="{% url 'cart_add' car.id %}" method="POST">
+                {% csrf_token %}
+                <table>
+                {{form.as_table}}
+                    </table>
+                <button>Добавить в корзину</button>
+            </form>
         </div>
     </div>
 </div>

@@ -76,7 +76,6 @@
         </div>
     </div>
     <div class="navigation_bar">
-        <div class="navigation_bar_wrapper">
             <ul class="navigation_list">
                 <li class="navigation_item">
                     <a href="{% url 'add_car' %}">
@@ -103,7 +102,15 @@
                     <button>Найти</button>
                 </form>
             </div>
-        </div>
+            <a href="{% url 'cart_detail' %}" class="basket">
+                <div class="basket_img">
+                    <img src="{% static 'img/basket.png' %}" alt="">
+                </div>
+                <p>
+                    {{ cart|length }}
+                </p>
+            </a>
+
     </div>
     <div class="list_card">
     {% block content %}
